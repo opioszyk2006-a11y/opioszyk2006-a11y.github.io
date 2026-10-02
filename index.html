@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olivia Pioszyk | Finance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #13294b;
+      --navy-soft: #24426e;
+      --accent: #cc0033;
+      --ink: #1f2933;
+      --muted: #5b6673;
+      --bg: #f7f7f9;
+      --card: #ffffff;
+      --line: #e4e6eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Inter", system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: var(--navy-soft); }
 
+    /* Navigation */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--navy);
+      padding: 14px 24px;
+      display: flex; justify-content: space-between; align-items: center;
+      flex-wrap: wrap; gap: 8px;
+    }
+    nav .brand { color: #fff; font-weight: 700; text-decoration: none; letter-spacing: 0.5px; }
+    nav ul { list-style: none; display: flex; gap: 22px; flex-wrap: wrap; }
+    nav ul a { color: #d6deea; text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+    nav ul a:hover { color: #fff; }
+
+    /* Hero / Personal Statement */
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+      color: #fff;
+      padding: 90px 24px 80px;
+      text-align: center;
+    }
+    header h1 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      margin-bottom: 6px;
+    }
+    header .tagline { color: #b9c6d8; font-size: 1.05rem; margin-bottom: 28px; }
+    .statement {
+      max-width: 760px; margin: 0 auto;
+      font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+      border-left: 4px solid var(--accent);
+      padding: 6px 0 6px 20px;
+      text-align: left;
+    }
+    .cta { margin-top: 32px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 10px 22px; border-radius: 6px;
+      text-decoration: none; font-weight: 600; font-size: 0.95rem;
+    }
+    .btn-primary { background: var(--accent); color: #fff; }
+    .btn-outline { border: 1.5px solid #fff; color: #fff; }
+
+    /* Sections */
+    section { max-width: 1000px; margin: 0 auto; padding: 70px 24px 20px; }
+    section h2 {
+      font-family: "Playfair Display", Georgia, serif;
+      font-size: 1.9rem; color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .section-sub { color: var(--muted); margin-bottom: 30px; }
+
+    /* Skills */
+    .skills-grid {
+      display: grid; gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .skill-card {
+      background: var(--card); border: 1px solid var(--line);
+      border-radius: 10px; padding: 22px;
+    }
+    .skill-card h3 { font-size: 1.05rem; color: var(--navy); margin-bottom: 14px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: #eef2f8; color: var(--navy-soft);
+      padding: 5px 12px; border-radius: 999px;
+      font-size: 0.88rem; font-weight: 500;
+    }
+
+    /* Projects */
+    .projects { display: grid; gap: 22px; }
+    .project {
+      background: var(--card); border: 1px solid var(--line);
+      border-top: 4px solid var(--accent);
+      border-radius: 10px; padding: 26px;
+    }
+    .project .meta { color: var(--muted); font-size: 0.88rem; margin-bottom: 6px; }
+    .project h3 { color: var(--navy); font-size: 1.25rem; margin-bottom: 10px; }
+    .project p { margin-bottom: 14px; }
+    .project ul { margin: 0 0 16px 20px; }
+    .project li { margin-bottom: 4px; }
+    .project .links a { font-weight: 600; margin-right: 18px; }
+
+    /* Contact / Footer */
+    footer {
+      margin-top: 70px; background: var(--navy); color: #d6deea;
+      padding: 40px 24px; text-align: center;
+    }
+    footer h2 { font-family: "Playfair Display", Georgia, serif; color: #fff; margin-bottom: 10px; }
+    footer a { color: #fff; }
+    footer .small { margin-top: 20px; font-size: 0.85rem; color: #8fa0b8; }
+
+    @media (max-width: 600px) {
+      nav { justify-content: center; }
+      header { padding: 60px 16px 56px; }
+      section { padding: 50px 16px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a class="brand" href="#top">OLIVIA PIOSZYK</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PERSONAL STATEMENT -->
+  <header id="top">
+    <div id="about">
+      <h1>Olivia Pioszyk</h1>
+      <p class="tagline">Finance Major | Rutgers Business School | Class of 2028</p>
+      <p class="statement">
+        I'm a junior studying Finance at Rutgers Business School who has built a strong foundation in banking and professional services through internships at Royal Bank of Canada and Lyons &amp; Associates, and I'm ready to bring that analytical mindset and work ethic to a career in finance.
+      </p>
+      <div class="cta">
+        <a class="btn btn-primary" href="#projects">View My Experience</a>
+        <a class="btn btn-outline" href="https://www.linkedin.com/in/olivia-pioszyk-3888b2360" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p class="section-sub">What I bring to a team.</p>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>Professional Skillset</h3>
+        <div class="tags">
+          <span class="tag">Communication</span>
+          <span class="tag">Attention to Detail</span>
+          <span class="tag">Organization</span>
+          <span class="tag">Time Management</span>
+          <span class="tag">Problem Solving</span>
+          <span class="tag">Teamwork</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Financial Skillset</h3>
+        <div class="tags">
+          <span class="tag">Financial Analysis</span>
+          <span class="tag">Financial Statements</span>
+          <span class="tag">Monthly &amp; Quarterly Close</span>
+          <span class="tag">Account Reconciliations</span>
+          <span class="tag">Financial Research</span>
+          <span class="tag">Client Service</span>
+        </div>
+      </div>
+      <div class="skill-card">
+        <h3>Technical Skillset</h3>
+        <div class="tags">
+          <span class="tag">Microsoft Excel</span>
+          <span class="tag">PowerPoint</span>
+          <span class="tag">Microsoft Word</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects &amp; Experience</h2>
+    <p class="section-sub">Where I've put my skills to work.</p>
+    <div class="projects">
+
+      <article class="project">
+        <p class="meta">Royal Bank of Canada | Financial Control Intern | Jersey City, NJ | Summer 2026</p>
+        <h3>Royal Bank of Canada: Financial Control</h3>
+        <p>
+          Interned on the Financial Control team at one of the largest banks in North America, where I learned how a global institution keeps its financial reporting accurate and reliable.
+        </p>
+        <ul>
+          <li>Supported the team through the monthly and quarterly financial close process</li>
+          <li>Performed reconciliations and reviewed financial data to ensure accuracy</li>
+          <li>Built and maintained Excel files used in the team's reporting process</li>
+          <li>Gained a working understanding of financial controls at a major bank</li>
+        </ul>
+        <div class="links">
+          <a href="https://www.rbc.com" target="_blank" rel="noopener">About RBC</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <p class="meta">Lyons &amp; Associates, P.C. | Intern | Freehold, NJ | Summer 2025</p>
+        <h3>Lyons &amp; Associates Law Firm Internship</h3>
+        <p>
+          Interned at a full service New Jersey law firm, where I learned to handle detailed legal documents, stay organized under tight deadlines, and communicate professionally with attorneys and clients.
+        </p>
+        <ul>
+          <!-- EDIT these bullets to match what you actually did -->
+          <li>Assisted attorneys with research and the preparation of case documents</li>
+          <li>Organized client files and records with close attention to detail</li>
+          <li>Supported client communication and daily office operations</li>
+        </ul>
+        <div class="links">
+          <a href="https://www.lyonspc.com" target="_blank" rel="noopener">Firm Website</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <p class="meta">Joshua Harr Shane Foundation | Volunteer | Central New Jersey</p>
+        <h3>Giving Back to My Community</h3>
+        <p>
+          I volunteer with the Joshua Harr Shane Foundation, a Central New Jersey nonprofit that supports children with serious medical needs, education for individuals with special needs, military families, and disaster relief. Giving back to my community is something I truly care about, and it reminds me that my work should make a real difference in people's lives.
+        </p>
+        <ul>
+          <!-- EDIT these bullets to match what you actually did -->
+          <li>Help plan and run fundraising events that support local families</li>
+          <li>Work alongside a team of volunteers to keep events organized and running smoothly</li>
+          <li>Connect with community members and donors on behalf of the foundation</li>
+        </ul>
+        <div class="links">
+          <a href="https://www.joshuaharrshane.org" target="_blank" rel="noopener">Foundation Website</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <footer id="contact">
+    <h2>Let's Connect</h2>
+    <p>
+      <a href="mailto:op159@scarletmail.rutgers.edu">op159@scarletmail.rutgers.edu</a> &nbsp;|&nbsp;
+      <a href="https://www.linkedin.com/in/olivia-pioszyk-3888b2360" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+    <p class="small">&copy; 2026 Olivia Pioszyk. Built with HTML &amp; CSS, hosted on GitHub Pages.</p>
+  </footer>
+
+</body>
+</html>
